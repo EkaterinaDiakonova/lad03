@@ -123,4 +123,16 @@ int num = int.Parse(Console.ReadLine());
 bool isEven = num % 2 == 0;
 Console.WriteLine($"Число {num} четное: {isEven}");
 
+Console.WriteLine("Задание 2");
 
+int coins = 7;
+int gotCoins = coins++; // coins++ сначала отдает старое значение (7), а потом увеличивает его на 1
+Console.WriteLine($"coins++ вернул:{gotCoins}, стало coins = {coins}"); // gotCoins = 7, а coins стал 8
+
+int num10 = 3;
+int Numbe = ++num10; // ++num10 сначала увеличивает num10(3 => 4), а потом отдает новое значение
+Console.WriteLine($"++num10 вернул:{Numbe}, стало num10 = {num10}"); // Numbe = 4, и num10 тоже 4
+
+int level = 5;
+int score = level++ + ++level; //читаем слева направо: 1)level ++ берет старое 5, потом level становится 6. 2)++level увеличивает 6 до 7, берет 7. 3) и складывает это: 5 + 7 = 12; => score = 12, level = 7
+Console.WriteLine($"level++ + ++level = {score}, level = {level}");
