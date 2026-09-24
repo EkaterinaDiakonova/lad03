@@ -136,3 +136,25 @@ Console.WriteLine($"++num10 вернул:{Numbe}, стало num10 = {num10}"); 
 int level = 5;
 int score = level++ + ++level; //читаем слева направо: 1)level ++ берет старое 5, потом level становится 6. 2)++level увеличивает 6 до 7, берет 7. 3) и складывает это: 5 + 7 = 12; => score = 12, level = 7
 Console.WriteLine($"level++ + ++level = {score}, level = {level}");
+
+Console.WriteLine("Задание 3");
+Console.Write("Сумма покупки: ");
+double s = double.Parse(Console.ReadLine());
+
+Console.Write("карта клиента (1 - да, 0 - нет): ");
+int k = int.Parse(Console.ReadLine());
+bool card = (k == 1);
+
+Console.Write("Товаров в чеке: ");
+int t = int.Parse(Console.ReadLine());
+
+bool s1 = s >= 3000;
+bool t1 = t >= 3;
+bool both = s1 && t1;
+bool disc = both || card;
+
+Console.WriteLine($"Сумма >= 3000: {s1}");
+Console.WriteLine($"Товаров >= 3: {t1}");
+Console.WriteLine($"Сумма и товары: {both}");
+Console.WriteLine($"Карта: {card}");
+Console.WriteLine($"Скидка: {disc}");
