@@ -158,3 +158,6 @@ Console.WriteLine($"Товаров >= 3: {t1}");
 Console.WriteLine($"Сумма и товары: {both}");
 Console.WriteLine($"Карта: {card}");
 Console.WriteLine($"Скидка: {disc}");
+
+int r = 10 - 2 * 3 + 4 / 2;
+Console.WriteLine($"10 - 2 * 3 + 4 / 2 = {r}");
